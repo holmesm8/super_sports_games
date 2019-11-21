@@ -14,17 +14,27 @@ calculate_mean = calculate_mean.to_f
 
 number_minus_avg = []
 
+
 ages.each do |x|
-  number_minus_avg << x -= mean.round
+  number_minus_avg << (x -= mean).round(1)
 end
 
 squared_array = []
 
 number_minus_avg.each do |x|
-  squared_array << x ** 2
+  squared_array << (x ** 2).round(1)
 end
 
-puts squared_array
+summed_square = 0
+squared_array.each do |x|
+  summed_square += x
+end
+
+division = (summed_square / number_of_ages).round(2).to_f
+
+standard_dev = Math.sqrt(division).round(2)
+
+puts standard_dev
 
 
 
