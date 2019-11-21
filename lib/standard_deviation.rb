@@ -1,9 +1,9 @@
 ages = [24, 30, 18, 20, 41]
 
-added_total = []
+added_total = 0
 
 ages.each do |x|
-  added_total =+ x
+  added_total += x
 end
 
 puts added_total
