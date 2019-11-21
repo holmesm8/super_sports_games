@@ -8,16 +8,23 @@ end
 
 number_of_ages = ages.count
 calculate_mean = added_total / ages.count.to_f
+mean = calculate_mean.to_f
 
 calculate_mean = calculate_mean.to_f
 
 number_minus_avg = []
 
 ages.each do |x|
-  number_minus_avg -= 26.6
+  number_minus_avg << x -= mean.round
 end
 
-puts number_minus_avg
+squared_array = []
+
+number_minus_avg.each do |x|
+  squared_array << x ** 2
+end
+
+puts squared_array
 
 
 
