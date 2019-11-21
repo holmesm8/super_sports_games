@@ -24,6 +24,7 @@ class Event
   end
 
   def standard_deviation_age
+    @ages.average_age
 
   end
 require "pry"; binding.pry
